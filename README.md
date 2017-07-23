@@ -15,7 +15,7 @@ $ yarn start
 
 The app will then be running on http://localhost:3000
 
-`$ yarn start` uses a library called [nodemon](https://github.com/remy/nodemon) to run the server for development. This enables the server to restart after each change, rather than doing it manually.
+`yarn start` uses a library called [nodemon](https://github.com/remy/nodemon) to run the server for development. This enables the server to restart after each change, rather than doing it manually.
 
 ## Working with a database
 
