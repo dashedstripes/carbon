@@ -26,3 +26,11 @@ To configure sequelize for your own database, modify the config.json file locate
 ## Adding a new API route
 
 To create a new api resource, copy the `todos` folder in `server/api/v1/todos` and rename it to whatever your resource is called. For example, to create a `users` resource, copy the folder to `server/api/v1/users` then update the `index.js` file.
+
+## Developing
+
+I'd like to keep this project fairly minimal to allow it to be flexible enough for any single page application project. However I'm sure optimisations and better ways of doing things will be found. If you'd like to help develop the project please feel free to submit a pull request with your changes.
+
+The main two components of the app are the `client` and `server`.
+
+The `client` is a basic ReactJS app with Redux bindings for state management. The `server` is a minimal REST API with sequelize as the ORM.
