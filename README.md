@@ -2,10 +2,9 @@
 
 A minimal framework for building a modern fullstack app.
 
-**Stack**
-- ExpressJS
-- Sequelize
-- ReactJS
+- [ExpressJS](https://expressjs.com/)
+- [SequelizeJS](http://docs.sequelizejs.com/)
+- [ReactJS](https://facebook.github.io/react/)
 
 ## Getting Started
 
