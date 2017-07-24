@@ -2,9 +2,12 @@
 
 A minimal framework for building a modern fullstack app.
 
+- [ReactJS](https://facebook.github.io/react/)
+- [React Router](https://github.com/ReactTraining/react-router)
+- [Redux](https://github.com/reactjs/redux)
 - [ExpressJS](https://expressjs.com/)
 - [SequelizeJS](http://docs.sequelizejs.com/)
-- [ReactJS](https://facebook.github.io/react/)
+- [PostgreSQL](https://www.postgresql.org/)
 
 ## Getting Started
 
