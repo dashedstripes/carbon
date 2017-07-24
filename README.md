@@ -25,7 +25,7 @@ To configure sequelize for your own database, modify the config.json file locate
 
 ## Adding a new API route
 
-To create a new api resource, copy the `todos` folder in `server/api/v1/todos` and rename it to whatever your resource is called. For example, to create a `users` resource, copy the folder to `server/api/v1/users` then update the `index.js` file.
+To create a new api resource, first create a model using `sequelize-cli`, then copy the `todos` folder in `server/api/v1/todos` and rename it to whatever the plural for your model is called. For example, if you created a `User` model, then copy the `todos` folder to `server/api/v1/users` and update the `index.js` file.
 
 If eventually, you'd like to create a `v2` API, all you need to do is copy `server/api/v1` to the same folder, rename it to `v2`, then update `server/api/index.js` to include `v2` rather than `v1`.
 
