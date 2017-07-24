@@ -87,4 +87,4 @@ typings/
 
 ### Project Specific ###
 
-./client/dist/bundle.js
+client/dist/bundle.js
