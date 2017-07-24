@@ -7,14 +7,22 @@ import App from './components/App'
 import TodoList from './components/TodoList'
 import PageNotFound from './components/PageNotFound'
 
-ReactDOM.render(
-  <Provider store={store}>
-    <BrowserRouter>
-      <App>
-        <Switch>
-          <Route path='/' exact component={TodoList}/>
-          <Route component={PageNotFound}/>
-        </Switch>
-      </App>
-    </BrowserRouter>
-  </Provider>, document.getElementById('app')) 
+const render = (Component) => {
+  ReactDOM.render(
+    <Provider store={store}>
+      <BrowserRouter>
+        <Component>
+          <Switch>
+            <Route path='/' exact component={TodoList}/>
+            <Route component={PageNotFound}/>
+          </Switch>
+        </Component>
+      </BrowserRouter>
+    </Provider>, document.getElementById('app')) 
+}
+
+render(App)
+
+if (module.hot) {
+  module.hot.accept('./components/App', () => { render(App) })
+}
