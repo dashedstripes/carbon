@@ -1,4 +1,5 @@
 const webpack = require('webpack')
+const path = require('path')
 
 const config = {
 
@@ -7,7 +8,7 @@ const config = {
   ],
 
   output: {
-    path: __dirname + '/client/dist',
+    path: path.join(__dirname, './client/dist'),
     filename: 'bundle.js',
     publicPath: '/dist'
   },
