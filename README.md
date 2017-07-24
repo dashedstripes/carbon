@@ -11,14 +11,33 @@ A minimal framework for building a modern fullstack single page app.
 
 ## Getting Started
 
+Install all dependencies.
+
 ```
 $ yarn install
+```
+
+Run the development server with hot reloading.
+
+```
+$ yarn dev
+```
+
+Build the project for production
+
+```
+$ yarn build
+```
+
+Run the production server
+
+```
 $ yarn start
 ```
 
 The app will then be running on http://localhost:3000
 
-`yarn start` uses a library called [nodemon](https://github.com/remy/nodemon) to run the server for development. This enables the server to restart after each change, rather than doing it manually.
+`yarn dev` uses a library called [nodemon](https://github.com/remy/nodemon) to run the server for development. This enables the server to restart after each change, rather than doing it manually.
 
 ## Working with a database
 
