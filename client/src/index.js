@@ -17,4 +17,4 @@ ReactDOM.render(
         </Switch>
       </App>
     </BrowserRouter>
-  </Provider>, document.getElementById('app'))
+  </Provider>, document.getElementById('app')) 

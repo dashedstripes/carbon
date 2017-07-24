@@ -84,3 +84,7 @@ typings/
 
 # dotenv environment variables file
 .env
+
+### Project Specific ###
+
+./client/dist/bundle.js
