@@ -6,7 +6,7 @@ import Todo from '../Todo'
 class TodoList extends Component {
   constructor(props) {
     super(props)
-    fetch(`${window.location.origin}/api/v1/todos`).then((res) => {
+    fetch(`/api/v1/todos`).then((res) => {
       return res.json()
     }).then((todos) => {
       this.props.dispatch(setTodos(todos))
