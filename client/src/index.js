@@ -1,16 +1,20 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import { Provider } from 'react-redux'
 import { BrowserRouter, IndexRoute, Route, Link, Switch } from 'react-router-dom'
+import store from './store'
 import App from './components/App'
-import Home from './components/Home'
+import TodoList from './components/TodoList'
 import PageNotFound from './components/PageNotFound'
 
 ReactDOM.render(
-  <BrowserRouter>
-    <App>
-      <Switch>
-        <Route path='/' exact component={Home}/>
-        <Route component={PageNotFound}/>
-      </Switch>
-    </App>
-  </BrowserRouter>, document.getElementById('app'))
+  <Provider store={store}>
+    <BrowserRouter>
+      <App>
+        <Switch>
+          <Route path='/' exact component={TodoList}/>
+          <Route component={PageNotFound}/>
+        </Switch>
+      </App>
+    </BrowserRouter>
+  </Provider>, document.getElementById('app'))
