@@ -1,6 +1,6 @@
 # WebApp
 
-A minimal framework for building a modern fullstack app.
+A minimal framework for building a modern fullstack single page app.
 
 - [ReactJS](https://facebook.github.io/react/)
 - [React Router](https://github.com/ReactTraining/react-router)
