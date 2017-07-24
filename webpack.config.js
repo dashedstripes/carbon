@@ -3,7 +3,6 @@ const webpack = require('webpack')
 const config = {
 
   entry: [
-    'webpack-hot-middleware/client',
     './client/src/index.js'
   ],
 
@@ -17,9 +16,16 @@ const config = {
     rules: [
       { test: /\.js$/, exclude: /node_modules/, loader: "babel-loader" }
     ]
-  },
+  }
+}
 
-  plugins: [
+if(process.env.NODE_ENV == 'development') {
+  config.entry = [
+    'webpack-hot-middleware/client',
+    './client/src/index.js'
+  ]
+
+  config.plugins = [
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoEmitOnErrorsPlugin()
   ]

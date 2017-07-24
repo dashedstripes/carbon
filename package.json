@@ -1,7 +1,8 @@
 {
   "scripts": {
-    "start": "./node_modules/.bin/nodemon server/index.js",
-    "watch": "./node_modules/.bin/webpack --watch"
+    "start": "node server/index.js",
+    "dev": "NODE_ENV=development ./node_modules/.bin/nodemon server/index.js",
+    "build": "./node_modules/.bin/webpack"
   },
   "dependencies": {
     "body-parser": "^1.17.2",
