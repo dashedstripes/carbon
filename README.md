@@ -55,6 +55,12 @@ If eventually, you'd like to create a `v2` API, all you need to do is copy `serv
 
 For the client side react app, I've used [react-router](https://reacttraining.com/react-router/) v4. This has some fairly major changes over previous version so it's highly recommended to look over the changes if you are used to previous versions.
 
+## Testing
+
+`$ yarn test` runs the test suite from `server/test`.
+
+You can define unit tests inside `server/test/models` then require them in `server/test/index.js`
+
 ## Developing
 
 I'd like to keep this project fairly minimal to allow it to be flexible enough for any single page application project. However I'm sure optimisations and better ways of doing things will be found. If you'd like to help develop the project please feel free to submit a pull request with your changes.
