@@ -27,5 +27,5 @@ app.use('/', pages)
 
 
 app.listen(PORT, () => {
-  console.log(`App running on https://localhost:${PORT}`)
+  console.log(`App running on http://localhost:${PORT}`)
 })
