@@ -10,13 +10,21 @@ module.exports = () => {
 
   describe('Todo', () => {
     it('should have an action', (done) => {
-      Todo.build({ action: '' }).validate().then((val) => {
+      Todo.create({
+        action: ''
+      }).then(function (result) {
         expect.fail()
         done()
-      }).catch((err) => {
-        expect(err.name).to.equal('SequelizeValidationError')
+      }).catch(function (err) {
+        expect(err.name).to.be.equal('SequelizeValidationError')
         done()
       })
+    })
+  })
+
+  after((done) => {
+    Todo.drop({ logging: false }).then(() => {
+      done()
     })
   })
 }
