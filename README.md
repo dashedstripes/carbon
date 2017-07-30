@@ -61,6 +61,17 @@ For the client side react app, I've used [react-router](https://reacttraining.co
 
 You can define unit tests inside `server/test/models` then require them in `server/test/index.js`
 
+## Building for production
+
+To get the app ready for production, you will need to run `yarn build` to create the `bundle.js` file. Then you need to migrate the database for production specifying the `NODE_ENV`.
+
+```
+$ NODE_ENV=production sequelize db:migrate
+$ NODE_ENV=production sequelize db:seed:all
+```
+
+Once the database is migrated and seeded, run `yarn start` to start the production server.
+
 ## Developing
 
 I'd like to keep this project fairly minimal to allow it to be flexible enough for any single page application project. However I'm sure optimisations and better ways of doing things will be found. If you'd like to help develop the project please feel free to submit a pull request with your changes.
