@@ -15,7 +15,7 @@ router.route('/todos')
       action: req.body.action
     }).then((todo) => {
       res.json(todo.dataValues)
-    }, (err) => {
+    }).catch((err) => {
       res.status(500).send({ error: err })
     })
   })

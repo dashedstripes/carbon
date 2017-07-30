@@ -25,6 +25,7 @@ class NewTodo extends Component {
   }
 
   submit(e) {
+
     fetch('/api/v1/todos', {
       headers: {
         'Content-Type': 'application/json'
@@ -34,14 +35,9 @@ class NewTodo extends Component {
         action: this.state.input
       })
     }).then((res) => {
-      if(!res.ok) {
-        throw Error(res.statusText)
-      }
       return res.json()
     }).then((json) => {
-      this.props.dispatch(addTodo(json))
-    }).catch((err) => {
-      console.log(err)
+      console.log(json)
     })
 
     this.setState({
