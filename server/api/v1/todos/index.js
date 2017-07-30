@@ -15,6 +15,8 @@ router.route('/todos')
       action: req.body.action
     }).then((todo) => {
       res.json(todo.dataValues)
+    }, (err) => {
+      res.status(500).send({ error: err })
     })
   })
 
@@ -37,7 +39,7 @@ router.route('/todos/:todo_id')
       where: {
         id: req.params.todo_id
       }
-    }).then((account) => {
+    }).then((todo) => {
       res.json({ message: 'Todo updated.' })
     })
   })

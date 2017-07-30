@@ -35,7 +35,7 @@ class NewTodo extends Component {
       })
     }).then((res) => {
       return res.json()
-    }).catch((err) => {
+    }, (err) => {
       console.log(err)
     }).then((json) => {
       this.props.dispatch(addTodo(json))

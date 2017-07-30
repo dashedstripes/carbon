@@ -21,7 +21,7 @@ class TodoList extends Component {
         <ul>
           { this.props.todos.map((todo, index) => {
             return (
-              <Todo key={index} id={todo.id} action={todo.action} />
+              <Todo key={todo.id} id={todo.id} action={todo.action} />
             )
           }) }
         </ul>
