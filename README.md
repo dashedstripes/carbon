@@ -39,6 +39,8 @@ The app will then be running on http://localhost:3000
 
 `yarn dev` uses a library called [nodemon](https://github.com/remy/nodemon) to run the server for development. This enables the server to restart after each change, rather than doing it manually.
 
+This project begins as a simple todo app in order to provide a basic boilerplate on which to base your project. As you work on your project you will want to update api resources `server/api/v1`, tests `test/, server/test` and react/redux components `client/components, client/actions, client/reducers`.
+
 ## Working with a database
 
 This project uses [sequelizejs](http://docs.sequelizejs.com/) as the ORM. In order to create models, migrations and seeds, you will need to install the [sequelize-cli](https://github.com/sequelize/cli) library globally to your development machine. You can find all the commands to work with the library on the `sequelize-cli` repo [https://github.com/sequelize/cli](https://github.com/sequelize/cli)
