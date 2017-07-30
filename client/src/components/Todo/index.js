@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { editTodo, deleteTodo } from '../../actions/todos'
+import './style.scss'
 
 class Todo extends Component {
 
@@ -40,7 +41,7 @@ class Todo extends Component {
 
   render() {
     return (
-      <li className="Todo">
+      <li className="Todo" className="todo">
         <input type="text" value={ this.props.action } onChange={this.handleChange.bind(this)}/>
         <button onClick={this.handleClick.bind(this)}>Delete</button>
       </li>
