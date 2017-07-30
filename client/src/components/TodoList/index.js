@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { setTodos } from '../../actions/todos'
 import Todo from '../Todo'
+import NewTodo from '../NewTodo'
 
 class TodoList extends Component {
   constructor(props) {
@@ -24,6 +25,7 @@ class TodoList extends Component {
             )
           }) }
         </ul>
+        <NewTodo/>
       </div>
     );
   }

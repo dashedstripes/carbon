@@ -4,3 +4,10 @@ export const setTodos = (payload) => {
     payload
   }
 }
+
+export const addTodo = (payload) => {
+  return {
+    type: 'ADD_TODO',
+    payload
+  }
+}

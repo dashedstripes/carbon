@@ -1,0 +1,58 @@
+import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import { addTodo } from '../../actions/todos'
+
+class NewTodo extends Component {
+  constructor(props) {
+    super(props)
+
+    this.state = {
+      input: ''
+    }
+  }
+
+  handleChange(e) {
+    this.setState({
+      input: e.target.value
+    })
+  }
+
+  handleKeyDown(e) {
+    // Submit when spacebar is pressed
+    if(e.keyCode === 13) {
+      this.submit()
+    }
+  }
+
+  submit(e) {
+    this.props.dispatch(addTodo(this.state.input))
+    fetch('/api/v1/todos', {
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      method: 'POST',
+      body: JSON.stringify({
+        action: this.state.input
+      })
+    }).then((res) => {
+      console.log(res)
+    }).catch((err) => {
+      console.log(err)
+    })
+  }
+
+  render() {
+    return (
+      <div>
+        <input type="text" value={this.state.input} onChange={this.handleChange.bind(this)} onKeyDown={this.handleKeyDown.bind(this)}/>
+        <button onClick={this.submit.bind(this)}>New Todo</button>
+      </div>
+    );
+  }
+}
+
+function mapStateToProps(state) {
+  return state
+}
+
+export default connect(mapStateToProps)(NewTodo)
