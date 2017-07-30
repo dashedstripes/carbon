@@ -14,11 +14,11 @@ router.route('/todos')
     Todo.create({
       action: req.body.action
     }).then((todo) => {
-      res.json(todo)
+      res.json(todo.dataValues)
     })
   })
 
-router.route('/todos/todo_id')
+router.route('/todos/:todo_id')
 
   .get((req, res) => {
     Todo.findAll({

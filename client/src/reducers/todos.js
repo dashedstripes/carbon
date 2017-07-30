@@ -3,9 +3,13 @@ const todos = (state = [], action) => {
     case 'SET_TODOS':
       return Object.assign([], action.payload)
     case 'ADD_TODO':
-      let newState = Object.assign([], state)
-      newState.push({action: action.payload})
-      return newState
+      return Object.assign([], state).concat(action.payload)
+    case 'DELETE_TODO':
+      return Object.assign([], state).filter((val) => {
+        if(val.id !== action.id) {
+          return val
+        }
+      })
   }
   return state
 }
