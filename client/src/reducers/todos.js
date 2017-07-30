@@ -5,13 +5,12 @@ const todos = (state = [], action) => {
     case 'ADD_TODO':
       return Object.assign([], state).concat(action.payload)
     case 'EDIT_TODO':
-      let newState = Object.assign([], state)  
-      newState.map((val) => {
+      return Object.assign([], state).map((val) => {
         if(val.id == action.payload.id) {
           val.action = action.payload.action
         }
+        return val
       })
-      return newState
     case 'DELETE_TODO':
       return Object.assign([], state).filter((val) => {
         if(val.id !== action.id) {
