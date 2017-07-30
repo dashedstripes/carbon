@@ -2,12 +2,19 @@
 
 A minimal framework for building a modern fullstack single page app.
 
+**Client**
 - [ReactJS](https://facebook.github.io/react/)
 - [React Router](https://github.com/ReactTraining/react-router)
 - [Redux](https://github.com/reactjs/redux)
+
+**Server**
 - [ExpressJS](https://expressjs.com/)
 - [SequelizeJS](http://docs.sequelizejs.com/)
 - [PostgreSQL](https://www.postgresql.org/)
+
+**Testing**
+- [MochaJS](https://mochajs.org/)
+- [ChaiJS](http://chaijs.com/)
 
 ## Getting Started
 
