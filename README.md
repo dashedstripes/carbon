@@ -78,6 +78,16 @@ To run the app in production using docker, install docker on your web server and
 $ docker-compose up -d
 ```
 
+In a separate shell, create your production database.
+
+```
+$ docker-compose exec db psql -U postgres
+
+// Inside psql shell...
+$ postgres=# create database YOUR_DATABASE_NAME;
+$ \q // to exit out of psql
+```
+
 Then in a separate shell, run the following commands to migrate and seed the database.
 
 ```
