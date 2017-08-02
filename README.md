@@ -88,7 +88,7 @@ $ postgres=# create database YOUR_DATABASE_NAME;
 $ \q // to exit out of psql
 ```
 
-Then in a separate shell, run the following commands to migrate and seed the database.
+Next run the following commands to migrate and seed the database.
 
 ```
 $ docker-compose exec web sequelize db:migrate
