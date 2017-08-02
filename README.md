@@ -70,7 +70,24 @@ For the client side react app, I've used [react-router](https://reacttraining.co
 
 You can define unit tests inside `server/test/models` then require them in `server/test/index.js`.
 
-## Building for production
+## Building for production (Docker)
+
+To run the app in production using docker, install docker on your web server and run:
+
+```
+$ docker-compose up -d
+```
+
+Then in a separate shell, run the following commands to migrate and seed the database.
+
+```
+$ docker-compose exec web sequelize db:migrate
+$ docker-compose exec web sequelize db:seed:all
+```
+
+The app should now be running at http://localhost:3000
+
+## Building for production (Manual)
 
 To get the app ready for production, you will need to run `yarn build` which creates a `bundle.js` file. Then you need to migrate the database for production specifying the `NODE_ENV`.
 

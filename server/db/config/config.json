@@ -1,23 +1,23 @@
 {
   "development": {
-    "username": "adam",
+    "username": "postgres",
     "password": null,
     "database": "webapp_dev",
-    "host": "127.0.0.1",
+    "host": "db",
     "dialect": "postgres"
   },
   "test": {
-    "username": "adam",
+    "username": "postgres",
     "password": null,
     "database": "webapp_test",
-    "host": "127.0.0.1",
+    "host": "db",
     "dialect": "postgres"
   },
   "production": {
-    "username": "adam",
+    "username": "postgres",
     "password": null,
     "database": "webapp",
-    "host": "127.0.0.1",
+    "host": "db",
     "dialect": "postgres"
   }
 }
