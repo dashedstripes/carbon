@@ -25,7 +25,15 @@ $ docker-compose exec web sequelize db:migrate
 $ docker-compose exec web sequelize db:seed:all
 ```
 
-The app should now be running at `http://localhost:3000`
+The app will be running when you see this message:
+
+```
+web_1  | [nodemon] 1.11.0
+web_1  | [nodemon] to restart at any time, enter `rs`
+web_1  | [nodemon] watching: *.*
+web_1  | [nodemon] starting `node server/index.js`
+web_1  | App running on http://localhost:3000
+```
 
 ## Working with the ORM
 
