@@ -64,7 +64,7 @@ $ docker-compose exec web yarn test
 
 You can define unit tests inside `server/test/models` then require them in `server/test/index.js`.
 
-## Building for production (Docker)
+## Building for production
 
 To run the app in production using docker, install docker on your web server and run:
 
@@ -83,7 +83,7 @@ $ docker-compose exec web sequelize db:seed:all
 
 The app should now be running at `http://localhost:3000`
 
-## Developing
+## Contributing
 
 I'd like to keep this project fairly minimal to allow it to be flexible enough for any single page application project. However I'm sure optimisations and better ways of doing things will be found. If you'd like to help develop the project please feel free to submit a pull request with your changes.
 
