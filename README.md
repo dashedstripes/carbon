@@ -48,6 +48,33 @@ The app will then be running on http://localhost:3000
 
 This project contains a simple todo list app in order to provide a basic boilerplate with which to base your project.
 
+## Docker Development Environment
+
+Start the dev environment.
+
+```
+$ docker-compose up
+```
+
+In a separate shell, enter a psql instance on the database
+
+```
+$ docker-compose exec db psql -U postgres
+```
+
+Then, inside that, create the development database as defined in `server/db/config/config.json`.
+
+```
+$ create database webapp_dev; \q;
+```
+
+Once your database is setup, run the following commands to migrate and seed the database.
+
+```
+$ docker-compose exec web sequelize db:migrate
+$ docker-compose exec web sequelize db:seed:all
+```
+
 ## Working with a database
 
 This project uses [sequelizejs](http://docs.sequelizejs.com/) to connect to postgres. In order to use the ORM to create models, migrations and seeds, you will need to install the [sequelize-cli](https://github.com/sequelize/cli) library globally to your development machine. You can find all the commands to work with the library on the `sequelize-cli` repo [https://github.com/sequelize/cli](https://github.com/sequelize/cli)
