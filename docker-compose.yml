@@ -14,6 +14,8 @@ services:
       - db
   db:
     image: postgres
+    ports:
+      - "8001:5432"
     volumes:
       - db-data:/var/lib/postgresql/data
 
