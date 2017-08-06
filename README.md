@@ -6,17 +6,17 @@ A minimal framework for building a modern fullstack single page app.
 
 This project uses Docker to make it simple to get started.
 
-## Configure the database
+### Configure the database
 
 Edit `server/db/config/config.json` so that the database name for each environment matches your project name. As a rule of thumb, dev and test databases should be `yourproject_dev` and `yourproject_test` respectively.
 
-## Create the container
+### Create the container
 
 ```
 $ docker-compose up
 ```
 
-## Create and seed the database
+### Create and seed the database
 
 ```
 $ docker-compose exec db psql -U postgres
