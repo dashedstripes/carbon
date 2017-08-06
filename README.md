@@ -77,7 +77,7 @@ In a separate shell, create your production database.
 ```
 $ docker-compose exec db psql -U postgres
 $ create database yourproject; \q
-$ docker-compose exec web sequelize db:migrate
+$ docker-compose exec web sequelize db:migrate 
 $ docker-compose exec web sequelize db:seed:all
 ```
 

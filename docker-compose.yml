@@ -6,6 +6,8 @@ services:
     ports:
       - "3000:3000"
     command: yarn dev
+    environment:
+      - NODE_ENV=development
     depends_on: 
       - db
   db:
