@@ -1,4 +1,4 @@
-# WebApp
+# Carbon
 
 A minimal framework for building a modern fullstack single page app.
 
